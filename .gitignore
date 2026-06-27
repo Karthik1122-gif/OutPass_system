@@ -1,0 +1,8 @@
+node_modules/
+.env
+*.log
+.antigravity/
+.gemini/
+*.txt
+history_results.txt
+browser_history_results.txt

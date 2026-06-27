@@ -1,0 +1,48 @@
+{
+  "name": "ExitLog",
+  "type": "object",
+  "properties": {
+    "gatePassId": {
+      "type": "string",
+      "description": "Reference to GatePass ID"
+    },
+    "studentName": {
+      "type": "string",
+      "description": "Student name"
+    },
+    "rollNo": {
+      "type": "string",
+      "description": "Student roll number"
+    },
+    "exitTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Time when student left campus"
+    },
+    "entryTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Time when student returned"
+    },
+    "verifiedBy": {
+      "type": "string",
+      "description": "Email of security person who verified"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "exited",
+        "returned"
+      ],
+      "default": "exited",
+      "description": "Current status"
+    },
+    "remarks": {
+      "type": "string",
+      "description": "Any additional remarks"
+    }
+  },
+  "required": [
+    "gatePassId"
+  ]
+}

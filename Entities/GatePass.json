@@ -1,0 +1,89 @@
+{
+  "name": "GatePass",
+  "type": "object",
+  "properties": {
+    "studentId": {
+      "type": "string",
+      "description": "Reference to User ID"
+    },
+    "studentName": {
+      "type": "string",
+      "description": "Student name"
+    },
+    "rollNo": {
+      "type": "string",
+      "description": "Student roll number"
+    },
+    "branch": {
+      "type": "string",
+      "description": "Department/Branch"
+    },
+    "year": {
+      "type": "string",
+      "description": "Academic year"
+    },
+    "contact": {
+      "type": "string",
+      "description": "Contact number"
+    },
+    "reason": {
+      "type": "string",
+      "description": "Reason for leaving campus"
+    },
+    "destination": {
+      "type": "string",
+      "description": "Where the student is going"
+    },
+    "dateOfLeaving": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when student wants to leave"
+    },
+    "timeOfLeaving": {
+      "type": "string",
+      "description": "Time of leaving"
+    },
+    "expectedReturn": {
+      "type": "string",
+      "description": "Expected return date and time"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected",
+        "expired"
+      ],
+      "default": "pending",
+      "description": "Gate pass status"
+    },
+    "hodRemarks": {
+      "type": "string",
+      "description": "HOD remarks or reason for rejection"
+    },
+    "approvedBy": {
+      "type": "string",
+      "description": "Email of approving authority"
+    },
+    "approvedDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date and time of approval"
+    },
+    "qrCode": {
+      "type": "string",
+      "description": "Generated QR code data"
+    },
+    "attachmentUrl": {
+      "type": "string",
+      "description": "Optional attachment (medical certificate, etc.)"
+    }
+  },
+  "required": [
+    "reason",
+    "dateOfLeaving",
+    "timeOfLeaving",
+    "expectedReturn"
+  ]
+}
